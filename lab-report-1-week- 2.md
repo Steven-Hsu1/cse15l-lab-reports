@@ -31,7 +31,7 @@ Here we are working in a new project and so to connect to a remote desktop, we n
 
 Once the terminal is open and SSH is installed, run the command:
 
-> $ ssh cs15lsp22zz@ieng6.ucsd.edu
+```$ ssh cs15lsp22zz@ieng6.ucsd.edu```
 
 "zz" is the special identifier for different students so be sure to reset your password as you will need to know it to access the remote desktop.
 
@@ -51,31 +51,31 @@ You can also use different UNIX commands in the terminal in VS Code. Here's one 
 
 Try some other commands in the terminal. Here are a list of useful commands for you to try:
 
-1. cd ~
+1. `cd ~`
 
 > Changes to the root directory
 
-2. cd
+2. `cd`
 
 > change to directory of your choice
 
-3. ls -lat
+3. `ls -lat`
 
 > This lists all files even if hidden in long format(ls -a, ls -l, ls -t combined)
 
-4. ls -a
+4. `ls -a`
 
 > This lists all files even if hideen
 
-5. ls [directory] | ie /home/(username)/downloads/
+5. `ls [directory]` | ie /home/(username)/downloads/
 
 > This lists all files(not hidden) in your downloads folder
 
-6. cp /home/linux/ieng6/cs15lsp22/public/hello.txt ~/
+6. `cp /home/linux/ieng6/cs15lsp22/public/hello.txt ~/`
 
 > Copies "hello.txt" to the root directory of local reposiory
 
-7. cat /home/linux/ieng6/cs15lsp22/public/hello.txt
+7. `cat /home/linux/ieng6/cs15lsp22/public/hello.txt`
 
 > Creates new empty file called "hello.txt" in remote desktop
 
@@ -89,7 +89,7 @@ Let's try to move files with SCP. First let's create a file called "hello.txt" a
 
 Then we can copy this file over to a remote machine by using the command:
 
-> scp hello.txt cs15lsp22zz@ieng6.ucsd.edu:~/
+```scp hello.txt cs15lsp22zz@ieng6.ucsd.edu:~/```
 
 Change zz to your username and it should print something like this:
 
@@ -116,13 +116,15 @@ Now it will generate our "key" in a local repository and it should look somethin
 
 Log back into the remote desktop using **Step 2**. Now that we are on the server, type the command:
 
-> mkdir .ssh
+`mkdir .ssh`
 
 Now log out of the remote computer by pressing `Ctrl + D`
 
-On the client side, type the command: 
-> scp /Users/(user-name)/.ssh/id_rsa.pub
+On the client side, type the command:
+```
+scp /Users/(user-name)/.ssh/id_rsa.pub
 cs15lsp22zz@ieng6.ucsd.edu:~/.ssh/authorized_keys
+```
 
 Delete (username) and type in the name of the home directory. This was shown when it prompted to save the key on our local machine. Use that username and remember to replace zz with your school assigned username.
 
@@ -132,12 +134,14 @@ After this you should try to use ssh again and you won't have to type in your pa
 
 **Step 6**
 
-We can make using the terminal easier. For example, if we wanted to compile a java file, we need to use javac (filename).java and then java (filename). That's two steps to run a basic java command. We can reduce this by using the **semicolon** so that we can use multiple commands.
+We can make using the terminal easier. For example, if we wanted to compile a java file, we need to use `javac (filename).java` and then `java (filename)`. That's two steps to run a basic java command. We can reduce this by using the **semicolon** so that we can use multiple commands.
 
 With this idea in mind, we can shorten the process to compile a file in the client directory and then in the remote directory. An example file of WhereAmI.java tells the directory it's in and the username.
 
 We can use the command:
-> javac WhereAmI.java; java WhereAmI; ssh cs15lsp22auk@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"
+```
+javac WhereAmI.java; java WhereAmI; ssh cs15lsp22auk@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"
+```
 
 ![WHEREAMI](WHEREAMI.png)
 
