@@ -51,31 +51,31 @@ You can also use different UNIX commands in the terminal in VS Code. Here's one 
 
 Try some other commands in the terminal. Here are a list of useful commands for you to try:
 
-1. `cd ~`
+* `cd ~`
 
 > Changes to the root directory
 
-2. `cd`
+* `cd`
 
 > change to directory of your choice
 
-3. `ls -lat`
+* `ls -lat`
 
 > This lists all files even if hidden in long format(ls -a, ls -l, ls -t combined)
 
-4. `ls -a`
+* `ls -a`
 
 > This lists all files even if hideen
 
-5. `ls [directory]` | ie /home/(username)/downloads/
+* `ls [directory]` | ie /home/(username)/downloads/
 
 > This lists all files(not hidden) in your downloads folder
 
-6. `cp /home/linux/ieng6/cs15lsp22/public/hello.txt ~/`
+* `cp /home/linux/ieng6/cs15lsp22/public/hello.txt ~/`
 
 > Copies "hello.txt" to the root directory of local reposiory
 
-7. `cat /home/linux/ieng6/cs15lsp22/public/hello.txt`
+* `cat /home/linux/ieng6/cs15lsp22/public/hello.txt`
 
 > Creates new empty file called "hello.txt" in remote desktop
 
