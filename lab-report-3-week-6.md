@@ -49,6 +49,10 @@ Then after we've established that link, we can use the normal commands of
 
 ![pic8](SSHCOMMITPUSH.png)
 
+Here is the link to the test repository:
+
+[TestRepo](https://github.com/Steven-Hsu1/TestRepo/tree/main)
+
 ---
 
 **Part 3**
@@ -67,7 +71,7 @@ Then we can run this on the remote server using the junit versions of `javac` an
 
 We can also use a singular command to both copy a directory and run it. Let's try it with markdown-parse. I'm going to use the command `rm -r . markdown-parse` to delete the entire directory off the remote computer so we can use a singular command to copy and run the tests. Here is the command:
 
-```scp -r . ieng6:~/markdown-parse; cd ~/markdown-parse/; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest```
+```scp -r . ieng6:~/markdown-parse; ssh ieng6 "cd ~/markdown-parse; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"```
 
 Here is the run:
 
