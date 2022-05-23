@@ -11,8 +11,9 @@ Here is the link to the reviewed repository:
 --- 
 The expected outputs for the snippets are:
 
-```json
-snippet 1: ["`google.com", "google.com", "ucsd.edu"]
+```ruby
+snippet 1
+["`google.com", "google.com", "ucsd.edu"]
 
 snippet 2
 ["a.com", "a.com(())", "example.com"]
